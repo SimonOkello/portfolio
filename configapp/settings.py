@@ -40,13 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'home.apps.HomeConfig',
-    'about.apps.AboutConfig',
-    'achievements.apps.AchievementsConfig',
-    'contact.apps.ContactConfig',
-    'portfolio.apps.PortfolioConfig',
-    'resume.apps.ResumeConfig',
-    'services.apps.ServicesConfig',
-    'skilltags.apps.SkilltagsConfig',
 ]
 
 MIDDLEWARE = [

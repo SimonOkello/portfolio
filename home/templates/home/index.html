@@ -96,61 +96,15 @@
 
                 <article class="media">
                   <div class="media-content">
+                    {% for skill in skills %}
                     <div class="content">
                       <p>
-                        <strong>JavaScript:</strong>
+                        <strong>{{skill.name}}:</strong>
                         <br>
                         <progress class="progress is-primary" value="100" max="100"></progress>
                       </p>
                     </div>
-                  </div>
-                </article>
-
-                <article class="media">
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>Vue.js:</strong>
-                        <br>
-                        <progress class="progress is-primary" value="100" max="100"></progress>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="media">
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>Node.js:</strong>
-                        <br>
-                        <progress class="progress is-primary" value="100" max="100"></progress>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="media">
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>HTML5/CSS3</strong>
-                        <br>
-                        <progress class="progress is-primary" value="100" max="100"></progress>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="media">
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>Databases</strong>
-                        <br>
-                        <progress class="progress is-primary" value="100" max="100"></progress>
-                      </p>
-                    </div>
+                    {% endfor %}
                   </div>
                 </article>
               </div>
@@ -163,13 +117,7 @@
     <!-- Skills tags -->
     <br>
           <div class="tags custom-tags">
-            <span class="tag is-light">Node.js</span><span class="tag is-light">Express.js</span><span class="tag is-light">VueJS</span><span
-              class="tag is-light">JavaScript</span><span class="tag is-light">HTML5</span><span class="tag is-light">Canvas</span><span
-              class="tag is-light">CSS3</span><span class="tag is-light">Bulma</span><span class="tag is-light">Bootstrap</span><span
-              class="tag is-light">jQuery</span><span class="tag is-light">Pug</span><span class="tag is-light">Stylus</span><span
-              class="tag is-light">SASS/SCSS</span><span class="tag is-light">Webpack</span><span class="tag is-light">Git</span><span
-              class="tag is-light">ASP.NET Web Forms</span><span class="tag is-light">MSSQL</span><span class="tag is-light">MongoDB</span><span
-              class="tag is-light">Apache Cordova</span><span class="tag is-light">Chrome Extensions</span>
+            <span class="tag is-light">Django</span>
           </div>
 
     <!-- Services -->
