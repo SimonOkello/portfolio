@@ -38,6 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts.apps.AccountsConfig',
+    'home.apps.HomeConfig',
+    'about.apps.AboutConfig',
+    'achievements.apps.AchievementsConfig',
+    'contact.apps.ContactConfig',
+    'portfolio.apps.PortfolioConfig',
+    'resume.apps.ResumeConfig',
+    'services.apps.ServicesConfig',
+    'skilltags.apps.SkilltagsConfig',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +133,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT =  BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR / 'home/static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
