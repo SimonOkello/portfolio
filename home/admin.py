@@ -5,7 +5,9 @@ from .models import (
     About,
     Skill,
     Service,
+    Resume,
 )
 admin.site.register(About)
 admin.site.register(Skill)
 admin.site.register(Service)
+admin.site.register(Resume)

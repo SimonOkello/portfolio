@@ -29,6 +29,7 @@ class Skill(models.Model):
     def __str__(self):
         return str(self.name)
 
+
 class Service(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
@@ -36,3 +37,12 @@ class Service(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+class Resume(models.Model):
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    c_vitae = models.FileField(upload_to='media')
+    cover_letter = models.FileField(upload_to='media', null=True, blank=True)
+
+    def __str__(self):
+        return str(self.c_vitae)
