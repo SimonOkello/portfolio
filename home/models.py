@@ -27,6 +27,8 @@ class About(models.Model):
 class Skill(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
+    skill_image = models.ImageField(upload_to='media/skills', default='default.png')
+    skill_tags = TaggableManager()
 
     def __str__(self):
         return str(self.name)
@@ -43,8 +45,8 @@ class Service(models.Model):
 
 class Resume(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
-    c_vitae = models.FileField(upload_to='media')
-    cover_letter = models.FileField(upload_to='media', null=True, blank=True)
+    c_vitae = models.FileField(upload_to='media/CVS/%Y/%m/%D')
+    cover_letter = models.FileField(upload_to='media/CoverLetters/%Y/%m/%D', null=True, blank=True)
 
     def __str__(self):
         return str(self.c_vitae)
