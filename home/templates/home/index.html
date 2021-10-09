@@ -93,20 +93,17 @@
         <div class="card-content skills-content">
           <h3 class="title is-4">Skills</h3>
           <div class="content">
-
-            <article class="media">
-              <div class="media-content">
-                {% for skill in skills %}
-                <div class="content">
-                  <p>
-                    <strong>{{skill.name}}:</strong>
-                    <br>
-                    <progress class="progress is-primary" value="100" max="100"></progress>
-                  </p>
+            <div class="columns is-multiline is-mobile is-flex ">
+              {% for skill in skills %}
+              <div class="column is-4 is-flex is-align-content-space-evenly">
+                <div class="box">
+                <figure class="image is-64x64">
+                  <img src="{{skill.skill_image.url}}" alt="">
+                </figure>
                 </div>
-                {% endfor %}
               </div>
-            </article>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
@@ -117,7 +114,9 @@
 <!-- Skills tags -->
 <br>
 <div class="tags custom-tags">
-  <span class="tag is-light">Django</span>
+  {% for item in skill_tags %}
+  <span class="tag is-light">{{item}}</span>
+  {% endfor %}
 </div>
 
 <!-- Services -->
@@ -190,7 +189,8 @@
             </div>
             <footer class="card-footer">
               {% if obj.preview_url %}
-              <a href="{{obj.preview_url}}" class="card-footer-item" target="_blank" rel="noopenner noreferrer">Preview</a>
+              <a href="{{obj.preview_url}}" class="card-footer-item" target="_blank"
+                rel="noopenner noreferrer">Preview</a>
               {% else %}
               <a href="{{obj.preview_url}}" class="card-footer-item" target="_blank" rel="noopenner noreferrer"
                 onclick="return false;">Preview</a>

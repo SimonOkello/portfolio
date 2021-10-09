@@ -17,8 +17,10 @@ def index(request):
     resume = Resume.objects.all()
     portfolio = Portfolio.objects.all()
     common_tags = Portfolio.tags.most_common()
+    skill_tags = Skill.skill_tags.most_common()
 
     context = {'about': about, 'skills': skills,
                'services': services, 'resume': resume,
-               'portfolio': portfolio, 'common_tags':common_tags,}
+               'portfolio': portfolio, 'common_tags': common_tags,
+               'skill_tags': skill_tags}
     return render(request, 'home/index.html', context)
